@@ -4,6 +4,12 @@ stages:
   - plan
   - deploy
 
+image:
+  name: hashicorp/terraform:light
+  entrypoint:
+    - '/usr/bin/env'
+    - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
 terraform_init:
   stage: init
   script:
